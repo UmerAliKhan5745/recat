@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { useState } from 'react';
+import './App.css';
+import Square from './Square';
+
+function App( ) {
+  const [square,setsquare]=useState(Array(9).fill(null))
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='row-1'>
+      <Square value={square[1]}/>
+      <Square value={square[2]}/>
+      <Square value={square[3]}/>
+      </div>
+      <div className='row-2'>
+      <Square value={square[4]}/>
+      <Square value={square[5]}/>
+      <Square value={square[6]}/>
+      </div>
+      <div className='row-3'>
+      <Square value={square[7]}/>
+      <Square value={square[8]}/>
+      <Square value={square[9]}/>
+      </div>
     </div>
   );
 }
