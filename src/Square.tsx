@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
 
-function Square({value}:any) {
-    const [valuee,setvalue]=useState('')
-    const handleClick=()=>{
-        setvalue('X')
-
-    }
+function Square({value,ohanbleclick}:any) {
+    
 
   return (
     <>
-    <button onClick={handleClick}>{value}</button>
+    <button onClick={ohanbleclick}>{value}</button>
     </>
   )
 }
